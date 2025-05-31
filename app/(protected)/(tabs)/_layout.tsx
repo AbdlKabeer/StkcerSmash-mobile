@@ -66,13 +66,6 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="collaborate"
-        options={{
-          title: 'Groups',
-          tabBarIcon: ({ color }) => <CrossPlatformIcon size={28} name="person.2.fill" color={color} />,
-        }}
-      />
-      <Tabs.Screen
         name="profile"
         options={{
           title: 'Profile',

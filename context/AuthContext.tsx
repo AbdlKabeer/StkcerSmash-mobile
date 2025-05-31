@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useRouter, SplashScreen } from 'expo-router';
 
 interface Profile {
+  name: string;
   id: string;
   full_name: string;
   email: string;
@@ -154,6 +155,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   // Set user and profile data
   const setUserData = (userData: { id: string; email: string; full_name: string }) => {
     const newUser = {
+      name: userData.full_name, // or set as needed
       id: userData.id,
       email: userData.email,
       full_name: userData.full_name,
